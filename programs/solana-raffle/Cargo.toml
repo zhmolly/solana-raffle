@@ -1,0 +1,22 @@
+[package]
+name = "solana-raffle"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "solana_raffle"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = {version="0.28.0", features=["init-if-needed"]}
+anchor-spl = "0.28.0"
+arrayref = "0.3.6"
+mpl-token-metadata = { version = "1.11", features = ["no-entrypoint"] }
